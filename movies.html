@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Movies</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <h1>Movies Page</h1>
+
+  <div id="favorites"></div>
+
+  <a href="index.html">Home</a>
+
+  <script>
+
+    fetch("http://localhost:3000/favorites")
+      .then(res => res.json())
+      .then(data => {
+
+        const div = document.getElementById("favorites");
+
+        data.forEach(movie => {
+
+          div.innerHTML += `
+            <p>${movie.title}</p>
+          `;
+
+        });
+
+      });
+
+  </script>
+
+</body>
+
+</html>
