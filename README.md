@@ -6,8 +6,7 @@ Description
 A web app that lets users browse and save movies.
 
 Target Browsers
-- Chrome
-- Firefox
+-  Google Chrome
 - Safari
 
 ## Developer Manual
